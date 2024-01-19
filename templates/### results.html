@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Results</title>
+</head>
+<body>
+<h1>Results</h1>
+<p>Topic: {{ topic }}</p>
+
+<h2>Aggregated Articles</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+{% for article in articles %}
+<tr>
+<td>{{ article['title'] }}</td>
+<td>{{ article['summary'] }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
